@@ -22,6 +22,7 @@ app.get('/api/ping', (req, res) => {
 });
 
 // WebSocket
+// Usar io.emit quando é para transmitir para todos
 io.on('connection', (socket) => {
   console.log('🟢 Novo cliente conectado', socket.id);
 
