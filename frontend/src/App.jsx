@@ -4,17 +4,9 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="parent">
-      <div className="header">A</div>
-      <div className="board">
-        {/* <Board /> */}
-        <img src={"/src/assets/Board.svg"} alt="board" />
-      </div>
-      <div className="nw-player">Player 3</div>
-      <div className="sw-player">Player 1</div>
-      <div className="ne-player">Player 2</div>
-      <div className="se-player">Player 4</div>
-    </div>
+    <>
+      <Game />
+    </>
   );
 }
 
