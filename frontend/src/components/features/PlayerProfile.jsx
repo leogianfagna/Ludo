@@ -1,21 +1,4 @@
-import styles from "./PlayerProfile.module.scss";
-
-const PlayerProfile = ({ data, number }) => {
-  const { x, y } = getBoardPosition(number);
-
-  function getBoardPosition(number) {
-    switch (number) {
-      case 0:
-        return { x: 72, y: 82 };
-      case 1:
-        return { x: 30, y: 10 };
-      case 2:
-        return { x: 40, y: 50 };
-      case 3:
-        return { x: 50, y: 60 };
-    }
-  }
-
+const PlayerProfile = ({ data }) => {
   return (
     <div
       style={{
@@ -23,11 +6,29 @@ const PlayerProfile = ({ data, number }) => {
         position: "absolute",
         width: "235px",
         height: "100px",
-        right: `${x}%`,
-        top: `${y}%`
+        borderRadius: "8px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        gap: "10px",
+        padding: "5px",
       }}
     >
       <span>{data}</span>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          width: "90%",
+          height: "80%",
+        }}
+      >
+        {/* To-do: Melhorar com flex expandível e máximo 50% */}
+        <div style={{ outline: "1px solid black", width: "40%", borderRadius: "3px" }}>FOTO</div>
+        <div style={{ outline: "1px solid black", width: "40%", borderRadius: "3px" }}>DADO</div>
+      </div>
     </div>
   );
 };
