@@ -1,0 +1,20 @@
+.game-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100vh;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 40px;
+}
+
+.main {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
