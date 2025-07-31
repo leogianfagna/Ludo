@@ -1,13 +1,12 @@
 .parent {
   display: grid;
-  grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 35px 1fr 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  height: 100%;
+  grid-template-columns: 1fr auto 1fr; 
+  grid-template-rows: 35px auto auto; 
+  height: 100vh; 
   max-height: 100vh;
   box-sizing: border-box;
 }
+
 
 .header {
   background-color: rgb(67, 95, 95);
@@ -47,6 +46,20 @@
 }
 
 .board {
-  grid-area: 2 / 2 / 4 / 3;
+  grid-area: 2 / 2 / 4 / 3; 
   background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
 }
+
+.board img {
+  max-height: calc(100vh - 35px);
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  display: block;
+}
+

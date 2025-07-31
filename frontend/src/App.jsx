@@ -7,7 +7,8 @@ function App() {
     <div className="parent">
       <div className="header">A</div>
       <div className="board">
-        <Board />
+        {/* <Board /> */}
+        <img src={"/src/assets/Board.svg"} alt="board" />
       </div>
       <div className="nw-player">Player 3</div>
       <div className="sw-player">Player 1</div>
