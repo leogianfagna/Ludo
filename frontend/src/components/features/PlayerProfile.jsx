@@ -3,7 +3,6 @@ const PlayerProfile = ({ data }) => {
     <div
       style={{
         border: "2px solid purple",
-        position: "absolute",
         width: "235px",
         height: "100px",
         borderRadius: "8px",

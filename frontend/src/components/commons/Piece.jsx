@@ -1,23 +1,21 @@
 import styles from "./Piece.module.scss";
+import pawn from "/src/assets/Pawn.svg";
 
 const Piece = ({ color, position, setPos }) => {
-
   const handleMove = () => {
-    setPos((prevPos) => {
-      prevPos + 1
-    }); 
-  }
+    setPos((prevCount) => prevCount + 1);
+  };
 
   return (
-    <div
+    <img
+      src={pawn}
+      alt="pawn"
+      onClick={handleMove}
       className={styles["piece"]}
       style={{
-        borderRadius: "30px",
-        backgroundColor: color,
         top: `${position.x}%`,
         left: `${position.y}%`,
       }}
-      onClick={handleMove}
     />
   );
 };

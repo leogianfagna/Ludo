@@ -6,12 +6,11 @@ import { useState } from "react";
 
 const Board = () => {
   const [pos, setPos] = useState(0);
-
   return (
-    <>
+    <div style={{position: "relative"}}>
       <img src={board2} alt="board" className={styles["game-board"]} />
       <Piece color={"#47ac50ff"} position={paths[pos]} setPos={setPos} />
-    </>
+    </div>
   );
 };
 
